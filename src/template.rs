@@ -13,12 +13,12 @@ fn parse_input_part2(input: &str) -> Vec<String> {
 
 #[aoc(day0, part1)]
 fn part1(input: &[String]) -> usize {
-0
+    0
 }
 
 #[aoc(day0, part2)]
 fn part2(input: &[String]) -> usize {
-    part1(input)
+    0
 }
 
 #[cfg(test)]
@@ -40,17 +40,7 @@ mod tests {
 
     #[test]
     fn test_parse_input_part2() {
-        let expected = vec![
-            "2wo19ine".to_string(),
-            "8igh2wo3hree".to_string(),
-            "abc1ne23hreexyz".to_string(),
-            "x2w1ne34our".to_string(),
-            "49ine8ight7even2".to_string(),
-            "z1n8ight234".to_string(),
-            "7pqrst6ixteen".to_string(),
-        ];
-
-        assert_eq!(expected, parse_input_part2(get_test_input_part2()));
+        test_parse_input_part1();
     }
 
     #[test]
@@ -73,9 +63,6 @@ mod tests {
     }
 
     fn get_test_input_part2<'a>() -> &'a str {
-        indoc! {"
-            example
-            input
-        "}
+        get_test_input_part1()
     }
 }

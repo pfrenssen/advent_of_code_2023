@@ -50,7 +50,7 @@ fn parse_input_part2(input: &str) -> Vec<String> {
             result_line.push(chars.next().unwrap());
         }
         result.push(result_line);
-    };
+    }
 
     result
 }
