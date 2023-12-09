@@ -72,9 +72,21 @@ fn part1(input: &[HistoricValues]) -> isize {
 }
 
 #[aoc(day9, part2)]
-fn part2(input: &[String]) -> usize {
-    
-    0
+fn part2(input: &[String]) -> isize {
+    // Loop through the values backwards.
+    input
+        .iter()
+        .rev()
+        .map(|h| {
+            let sequences = HistoricValues::from(h.clone()).get_sequences();
+            sequences
+                .iter()
+                .map(|s| s[0])
+                .rev()
+                .reduce(|acc, v| v - acc)
+                .unwrap()
+        })
+        .sum()
 }
 
 #[cfg(test)]
